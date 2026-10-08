@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const grid = document.getElementById("fashion-grid");
 
   try {
-    const response = await fetch("/data/products.json");
+ const response = await fetch("./products.json");
     const data = await response.json();
 
     if (!data.items || data.items.length === 0) {
