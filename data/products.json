@@ -1,10 +1,10 @@
 {
   "items": [
     {
-      "title": "WEDDING GOWN",
-      "price": "₦80,000",
+      "title": "LADY WEDDING GOWN",
+      "price": "₦82,000",
       "category": "Gowns",
-      "image": "/uploads/shopping.webp",
+      "image": "uploads/shopping.webp",
       "description": "Nice piece"
     }
   ]
