@@ -6,6 +6,13 @@
       "category": "Gowns",
       "image": "uploads/shopping.webp",
       "description": "Nice piece"
+    },
+    {
+      "title": "Corporate wears",
+      "price": "₦200,000",
+      "category": "corporate",
+      "description": "For corporate lovers",
+      "image": "uploads/corporate.webp"
     }
   ]
 }
