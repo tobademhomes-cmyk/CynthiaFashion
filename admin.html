@@ -8,6 +8,35 @@
   <link href="config.yml" type="text/yaml" rel="cms-config-url" />
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
+  <script>
+  // Register custom live preview for the 'clothes_list' catalog
+  var ProductPreview = React.createClass({
+    render: function() {
+      const entry = this.props.entry;
+      const image = this.props.getAsset(entry.getIn(['data', 'image']));
+      
+      return React.createElement('div', { style: { padding: '20px', fontFamily: 'sans-serif' } },
+        React.createElement('div', { 
+          style: { 
+            border: '1px solid #eee', 
+            borderRadius: '10px', 
+            padding: '15px', 
+            maxWidth: '300px',
+            boxShadow: '0 4px 10px rgba(0,0,0,0.1)' 
+          } 
+        },
+          image ? React.createElement('img', { src: image.toString(), style: { width: '100%', borderRadius: '8px' } }) : null,
+          React.createElement('span', { style: { background: '#f3e5f5', padding: '4px 8px', borderRadius: '4px', fontSize: '12px' } }, entry.getIn(['data', 'category'])),
+          React.createElement('h3', { style: { margin: '10px 0 5px 0' } }, entry.getIn(['data', 'title'])),
+          React.createElement('p', { style: { color: '#b71c1c', fontWeight: 'bold' } }, entry.getIn(['data', 'price'])),
+          React.createElement('p', { style: { fontSize: '14px', color: '#666' } }, entry.getIn(['data', 'description']))
+        )
+      );
+    }
+  });
+
+  CMS.registerPreviewTemplate("clothes_list", ProductPreview);
+</script>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
