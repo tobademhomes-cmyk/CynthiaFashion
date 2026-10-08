@@ -1,11 +1,3 @@
 {
-  "items": [
-    {
-      "title": "Floral Summer Dress",
-      "price": "₦18,500",
-      "category": "Gowns",
-      "image": "/uploads/sample-dress.jpg",
-      "description": "Available in sizes M, L, XL. High quality breathable fabric."
-    }
-  ]
+  "items": []
 }
