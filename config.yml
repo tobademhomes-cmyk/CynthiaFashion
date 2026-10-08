@@ -9,7 +9,7 @@ collections:
   - name: "catalog"
     label: "Catalog"
     files:
-      - file: "products.json"
+      - file: "data/products.json"
         label: "Products List"
         name: "clothes_list"
         fields:
@@ -21,48 +21,4 @@ collections:
               - { label: "Price", name: "price", widget: "string" }
               - { label: "Category", name: "category", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
-              - { label: "Description", name: "description", widget: "text" }backend:
-  name: git-gateway
-  branch: main
-
-media_folder: "uploads"
-public_folder: "./uploads"
-
-collections:
-  - name: "fashion_catalog"
-    label: "Fashion Catalog"
-    files:
-      - file: "data/products.json"
-        label: "All Clothes & Products"
-        name: "clothes_list"
-        fields:
-          - name: "items"
-            label: "Clothing Items"
-            widget: "list"
-            summary: "{{fields.title}} - {{fields.price}}"
-            fields:
-              - { label: "Outfit Name", name: "title", widget: "string" }
-              - {
-                  label: "Price (e.g. ₦25,000)",
-                  name: "price",
-                  widget: "string",
-                }
-              - {
-                  label: "Category",
-                  name: "category",
-                  widget: "select",
-                  options:
-                    [
-                      "Gowns",
-                      "Two-Piece",
-                      "Casual",
-                      "Corporate",
-                      "Accessories",
-                    ],
-                }
-              - { label: "Clothing Photo", name: "image", widget: "image" }
-              - {
-                  label: "Description & Sizes Available",
-                  name: "description",
-                  widget: "text",
-                }
+              - { label: "Description", name: "description", widget: "text" }
